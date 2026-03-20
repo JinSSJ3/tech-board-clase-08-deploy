@@ -49,7 +49,7 @@ export async function submitArticle(state, formData) {
 
     console.log("submitArticle", title, url, id);
     console.log("submitArticle errors", errors.title?.length);
-    if (errors.title?.length > 0) {
+    if (errors.title?.length > 0 || errors.url?.length > 0) {
       console.log("[submitArticle] errors", errors);
 
       return {
