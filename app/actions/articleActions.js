@@ -43,7 +43,7 @@ export async function submitArticle(state, formData) {
       errors.title = "Titulo no puede ser vacío";
     }
 
-    if (!url.startsWith("http").length == 0) {
+    if (!url.startsWith("http") || url.length == 0) {
       errors.url = "Ingresar direción válida";
     }
 
